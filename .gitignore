@@ -1,0 +1,6 @@
+.DS_Store
+
+# The two blank lines are actually CRLF (\r) characters. This will ignore the
+# "Icon\r" you see in `git status` on MacOS.
+Icon
+# Okay, you may resume your editing. :)
