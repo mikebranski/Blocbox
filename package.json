@@ -1,0 +1,26 @@
+{
+  "name": "blocbox",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "css": "node scripts/css.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mikebranski/Blocbox.git"
+  },
+  "author": "Mike Branski <mikebranski@gmail.com>",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/mikebranski/Blocbox/issues"
+  },
+  "homepage": "https://github.com/mikebranski/Blocbox#readme",
+  "devDependencies": {
+    "postcss-cli": "^2.5.2",
+    "postcss-cssnext": "^2.7.0",
+    "postcss-import": "^8.1.2",
+    "postcss-nesting": "^2.3.1"
+  }
+}

@@ -1,0 +1,13 @@
+/* Variable example. */
+/*:root {
+  --mainColor: green;
+}
+
+a {
+  color: var(--mainColor);
+}*/
+
+/* Nesting example. */
+/*ul {
+  & li {}
+}*/
