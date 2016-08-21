@@ -5,6 +5,7 @@
   "main": "index.html",
   "scripts": {
     "css": "node scripts/css.js",
+    "start": "http-server",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -18,6 +19,7 @@
   },
   "homepage": "https://github.com/mikebranski/Blocbox#readme",
   "devDependencies": {
+    "http-server": "^0.9.0",
     "postcss-cli": "^2.5.2",
     "postcss-cssnext": "^2.7.0",
     "postcss-import": "^8.1.2",
