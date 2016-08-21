@@ -1,17 +1,48 @@
 <<<<<<< HEAD
 /* Variable example. */
-/*:root {
-  --mainColor: green;
+:root {
+  /* Purple! */
+  --mainColor: #7C577F;
+  /* Teal! */
+  --altColor: #1DB4C5;
+  /* Darker Teal! */
+  --altColorAccent: #126973;
+  /* White! */
+  --lightText: #FFFFFF;
+  /* Black! */
+  --darkText: #333333;
 }
 
-a {
-  color: var(--mainColor);
-}*/
+:first-child {
+  margin-top: 0;
+}
+
+html {
+  font-family: "Open Sans";
+  font-size: 16px;
+  color: var(--darkText);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Slabo 27px";
+  font-weight: normal;
+}
+
+h1 {
+  font-size: 64px;
+  line-height: 1.125em;
+}
+
+.masthead {
+  background-color: var(--mainColor);
+  color: var(--lightText);
+}
 
 /* Nesting example. */
 /*ul {
   & li {}
 }*/
+<<<<<<< Updated upstream
 =======
 html, body{
 	overflow-x: hidden;
@@ -58,3 +89,18 @@ p {
   margin:0 2% 20px;
 }
 >>>>>>> 9441faaec9b44d1319fd8267309884e1ad6c1732
+=======
+
+
+
+/* navbar */
+.navbar {
+  margin-right: auto;
+  margin-left: auto;
+
+  & ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+}
+>>>>>>> Stashed changes
