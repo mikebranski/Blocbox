@@ -1,4 +1,7 @@
-<<<<<<< HEAD
+/**
+ * Consider rolling in [PreCSS](https://github.com/jonathantneal/precss).
+ */
+
 /* Variable example. */
 :root {
   /* Purple! */
@@ -11,6 +14,8 @@
   --lightText: #FFFFFF;
   /* Black! */
   --darkText: #333333;
+
+  --borderRadius: 4px;
 }
 
 :first-child {
@@ -31,76 +36,163 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
   font-size: 64px;
   line-height: 1.125em;
+  margin-bottom: 0;
+}
+
+h4 {
+  margin-bottom: 0;
+  text-transform: uppercase;
+}
+
+p {
+  margin-top: 1.5em;
+  margin-bottom: 0;
+}
+
+nav ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+@define-mixin container {
+  padding: 1.875rem;
+}
+
+@define-mixin container__accented {
+  @mixin container;
+  background-color: var(--mainColor);
+  color: var(--lightText);
+
+  & a {
+    color: var(--lightText);
+  }
+}
+
+@define-mixin button {
+  background-color: var(--altColor);
+  border-radius: var(--borderRadius);
+  box-shadow: inset 0 -2px 2px 0 var(--altColorAccent);
+  color: var(--lightText);
+  display: inline-block;
+  font-weight: bold;
+  padding: 1em 3em;
+  text-align: center;
+  text-decoration: none;
+}
+
+@define-mixin button__link {
+  @mixin button;
+  background-color: transparent;
+  box-shadow: none;
+}
+
+@define-mixin button__link__accented {
+  @mixin button__link;
+  border: 2px solid var(--lightText);
 }
 
 .masthead {
-  background-color: var(--mainColor);
-  color: var(--lightText);
+  @mixin container__accented;
+}
+
+.masthead .navbar {
+  font-size: 0.875rem;
+
+  & .site-logo {
+    display: inline-block;
+  }
+
+  & .nav--primary {
+    display: block;
+    margin-top: 1.875em;
+    margin-bottom: 0;
+    text-align: center;
+
+    & li {
+      display: inline-block;
+
+      & + li {
+        margin-left: 2em;
+      }
+    }
+  }
+
+  & li a {
+    @mixin button__link;
+  }
+
+  & li:last-child a {
+    @mixin button__link__accented;
+  }
+
+}
+
+.masthead .hero {
+  font-size: 1.375rem;
+  margin-top: 2.5rem;
+  text-align: center;
+
+  & p {
+    margin-top: 1.36em;
+  }
+
+  & .call-to-action {
+    @mixin button;
+    font-size: 0.727272em;
+    margin-top: 1.875em;
+  }
+
+}
+
+.pricing {
+  @mixin container__accented;
+}
+
+.anchor {
+  @mixin container__accented;
+
+  & .legal {
+    display: block;
+  }
+
+  & .site-logo {
+    display: block;
+    margin-top: 2em;
+  }
+
+  & .grouped-links-container {
+
+    @media only screen and (min-width: 680px) {
+      float: right;
+      width: 400px;
+    }
+
+  }
+
+  & .grouped-links {
+    margin-top: 1.5em;
+
+    @media only screen and (min-width: 480px) {
+      float: left;
+      width: 33%;
+      background: green;
+    }
+
+    & ul {
+      list-style-type: none;
+      margin-top: 0;
+      margin-bottom: 0;
+      padding-left: 0;
+
+      & li {
+        /**/
+      }
+    }
+  }
+
 }
 
 /* Nesting example. */
 /*ul {
   & li {}
 }*/
-<<<<<<< Updated upstream
-=======
-html, body{
-	overflow-x: hidden;
-}
-body {
-	font-family: "Open Sans", sans-serif;
-	color: #333333;
-}
-h1, h2, h3, h4, h5, h6 {
-	font-family: "Slabo 27px", sans-serif;
-}
-h2 {
-	font-size: 28px;
-	font-weight: normal;
-	margin-bottom: 5px;
-}
-p {
-	font-size: 16px;
-	line-height: 19px;
-	font-weight: 100;
-}
-
-/* GRID */
-.container {
-  margin-right: auto;
-  margin-left: auto;
-  padding-left: 15px;
-  padding-right: 15px;
-  position: relative;
-}
-.container:before,
-.container:after {
-  content: " ";
-  display: table;
-}
-.container:after {
-  clear: both;
-}
-.one-half, .one-third, .one-fourth {
-  width:96%;
-  float:left;
-  position:relative;
-  min-height: 1px;
-  margin:0 2% 20px;
-}
->>>>>>> 9441faaec9b44d1319fd8267309884e1ad6c1732
-=======
-
-
-
-/* navbar */
-.navbar {
-  margin-right: auto;
-  margin-left: auto;
-
-  & ul {
-    list-style-type: none;
-    padding-left: 0;
-  }
-}
->>>>>>> Stashed changes
