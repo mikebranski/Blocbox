@@ -22,13 +22,18 @@
   margin-top: 0;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 html {
+  color: var(--darkText);
   font-family: "Open Sans";
   font-size: 16px;
-  color: var(--darkText);
 }
 
 h1, h2, h3, h4, h5, h6 {
+  color: var(--mainColor);
   font-family: "Slabo 27px";
   font-weight: normal;
 }
@@ -39,14 +44,25 @@ h1 {
   margin-bottom: 0;
 }
 
+h2 {
+  font-size: 48px;
+  line-height: 58px;
+  margin-bottom: 0;
+}
+
 h4 {
   margin-bottom: 0;
   text-transform: uppercase;
 }
 
 p {
+  line-height: 1.375em;
   margin-top: 1.5em;
   margin-bottom: 0;
+}
+
+img {
+  max-width: 100%;
 }
 
 nav ul {
@@ -63,8 +79,14 @@ nav ul {
   background-color: var(--mainColor);
   color: var(--lightText);
 
+  & h1,
+  & h2,
+  & h3,
+  & h4,
+  & h5,
+  & h6,
   & a {
-    color: var(--lightText);
+    color: inherit;
   }
 }
 
@@ -132,6 +154,10 @@ nav ul {
   margin-top: 2.5rem;
   text-align: center;
 
+  & h1 {
+    color: inherit;
+  }
+
   & p {
     margin-top: 1.36em;
   }
@@ -140,6 +166,31 @@ nav ul {
     @mixin button;
     font-size: 0.727272em;
     margin-top: 1.875em;
+  }
+
+}
+
+.features {
+
+  & .feature {
+    display: flex;
+    flex-direction: column-reverse;
+
+    & .feature-description,
+    & .feature-image {
+      /*flex: 1;*/
+    }
+
+    & .feature-description {
+      font-size: 1.5em;
+      padding: 3.75rem;
+      text-align: center;
+
+      & p {
+        margin-top: 1.083333em;
+      }
+    }
+
   }
 
 }
