@@ -515,6 +515,10 @@ nav ul {
   padding-left: 0;
 }
 
+section > .lead-in {
+  font-weight: 300;
+}
+
 .masthead {
   padding: 1.875rem;
   background-color: #7C577F;
@@ -628,14 +632,9 @@ nav ul {
           flex-direction: column-reverse;
 }
 
-.features .feature .feature-description,
-    .features .feature .feature-image {
-
-  /*flex: 1;*/
-}
-
 .features .feature .feature-description {
   font-size: 1.5em;
+  font-weight: 300;
   padding: 60px;
   padding: 3.75rem;
 }
@@ -669,6 +668,11 @@ nav ul {
 
 .anchor .legal {
   display: block;
+  font-weight: 300;
+}
+
+.anchor .legal b {
+  font-weight: 700;
 }
 
 .anchor .site-logo {

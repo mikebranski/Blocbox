@@ -118,6 +118,10 @@ nav ul {
   border: 2px solid var(--lightText);
 }
 
+section > .lead-in {
+  font-weight: 300;
+}
+
 .masthead {
   @mixin container__accented;
 }
@@ -179,13 +183,9 @@ nav ul {
     display: flex;
     flex-direction: column-reverse;
 
-    & .feature-description,
-    & .feature-image {
-      /*flex: 1;*/
-    }
-
     & .feature-description {
       font-size: 1.5em;
+      font-weight: 300;
       padding: 3.75rem;
 
       & p {
@@ -206,6 +206,11 @@ nav ul {
 
   & .legal {
     display: block;
+    font-weight: 300;
+
+    & b {
+      font-weight: 700;
+    }
   }
 
   & .site-logo {
