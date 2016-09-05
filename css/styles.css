@@ -16,6 +16,9 @@
   --darkText: #333333;
 
   --borderRadius: 4px;
+  --headingFontFamily: 'Slabo 27px';
+  --copyFontFamily: 'Open Sans';
+  --rootFontSize: 16px;
 }
 
 :first-child {
@@ -28,14 +31,14 @@
 
 html {
   color: var(--darkText);
-  font-family: "Open Sans";
-  font-size: 16px;
+  font-family: var(--copyFontFamily);
+  font-size: var(--rootFontSize);
   text-align: center;
 }
 
 h1, h2, h3, h4, h5, h6 {
   color: var(--mainColor);
-  font-family: "Slabo 27px";
+  font-family: var(--headingFontFamily);
   font-weight: normal;
   margin-bottom: 0;
 }
@@ -64,6 +67,10 @@ p {
   line-height: 1.375em;
   margin-top: 1.5em;
   margin-bottom: 0;
+}
+
+small {
+  font-size: .75em;
 }
 
 img {
@@ -199,6 +206,78 @@ section > .lead-in {
 
 .pricing {
   @mixin container__accented;
+  background-image: url('/images/pricing-background.png');
+  background-size: cover;
+
+  & .pricing-tier {
+    background-color: #ffffff;
+    box-shadow: rgba(0, 0, 0, .20) 0 2px 4px 0;
+    color: var(--darkText);
+    margin-top: 1.875rem;
+  }
+
+  & .pricing-tier-details {
+    padding: 30px;
+  }
+
+  /* TODO: Should these font styles be universal for <h4>'s? */
+  & .pricing-tier-name {
+    background-color: #e2e2e2;
+    box-shadow: rgba(0, 0, 0, .40) 0 1px 2px 0;
+    color: var(--darkText);
+    font-family: var(--copyFontFamily);
+    font-size: 21px;
+    font-weight: 700;
+    padding: 20px;
+  }
+
+  & .price {
+    color: var(--mainColor);
+
+    & .unit {
+      font-size: 32px;
+      line-height: 60px;
+      vertical-align: top;
+    }
+
+    & .amount {
+      font-family: var(--headingFontFamily);
+      font-size: 50px;
+      line-height: 61px;
+
+      &.numeric {
+        font-size: 65px;
+        line-height: 79px;
+      }
+    }
+
+    & .term {
+      color: #888888;
+      font-size: 20px;
+      line-height: 1.35em;
+      vertical-align: super;
+    }
+  }
+
+  & .pricing-tier-features {
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 50px;
+    list-style-type: none;
+    padding-left: 0;
+  }
+
+  & .call-to-action {
+    @mixin button;
+    display: block;
+    margin-top: 50px;
+  }
+
+  & .footnote {
+    display: block;
+    margin-top: 30px;
+    font-style: italic;
+  }
 }
 
 .anchor {
