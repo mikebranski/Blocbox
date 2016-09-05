@@ -651,7 +651,7 @@ section > .lead-in {
   padding: 1.875rem;
   background-color: #7C577F;
   color: #FFFFFF;
-  background-image: url('/images/pricing-background.png');
+  background-image: url('../images/pricing-background.png');
   background-size: cover
 
   /* TODO: Should these font styles be universal for <h4>'s? */

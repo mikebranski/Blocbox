@@ -206,7 +206,7 @@ section > .lead-in {
 
 .pricing {
   @mixin container__accented;
-  background-image: url('/images/pricing-background.png');
+  background-image: url('../images/pricing-background.png');
   background-size: cover;
 
   & .pricing-tier {
