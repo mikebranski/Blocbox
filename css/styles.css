@@ -281,6 +281,59 @@ section > .lead-in {
   }
 }
 
+.testimonials {
+  @mixin container;
+
+  & .testimonials-list {
+    margin-top: 40px;
+
+    & .testimonial {
+      display: flex;
+      flex-direction: column-reverse;
+
+      & + .testimonial {
+        margin-top: 30px;
+      }
+    }
+
+    & .identity-plate {
+      margin-top: 20px;
+      margin-right: auto;
+      margin-left: auto;
+      width: 80%;
+    }
+
+    & .avatar {
+      border-radius: 50%;
+      height: 50px;
+      width: 50px;
+    }
+
+    & .name {
+      display: block;
+      font-size: 20px;
+      font-weight: 700;
+    }
+
+    & .title {
+      display: block;
+      font-weight: 300;
+    }
+
+    & .location {
+      display: block;
+      font-style: italic;
+      font-weight: 300;
+    }
+
+    & .quote {
+      font-size: 18px;
+      line-height: 24px;
+      margin: 0;
+    }
+  }
+}
+
 .anchor {
   @mixin container__accented;
 

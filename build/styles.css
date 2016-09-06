@@ -746,6 +746,64 @@ section > .lead-in {
   color: inherit;
 }
 
+.testimonials {
+  padding: 1.875rem
+}
+
+.testimonials .testimonials-list {
+  margin-top: 40px;
+}
+
+.testimonials .testimonials-list .testimonial {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+}
+
+.testimonials .testimonials-list .testimonial + .testimonial {
+  margin-top: 30px;
+}
+
+.testimonials .testimonials-list .identity-plate {
+  margin-top: 20px;
+  margin-right: auto;
+  margin-left: auto;
+  width: 80%;
+}
+
+.testimonials .testimonials-list .avatar {
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+}
+
+.testimonials .testimonials-list .name {
+  display: block;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.testimonials .testimonials-list .title {
+  display: block;
+  font-weight: 300;
+}
+
+.testimonials .testimonials-list .location {
+  display: block;
+  font-style: italic;
+  font-weight: 300;
+}
+
+.testimonials .testimonials-list .quote {
+  font-size: 18px;
+  line-height: 24px;
+  margin: 0;
+}
+
 .anchor {
   padding: 1.875rem;
   background-color: #7C577F;
