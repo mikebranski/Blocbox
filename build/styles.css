@@ -496,6 +496,19 @@ h3 {
 }
 
 h4 {
+  font-family: 'Open Sans';
+  font-size: 21px;
+  font-size: 1.3125rem;
+  font-weight: 700;
+  margin-bottom: 0;
+  text-transform: uppercase;
+}
+
+h5 {
+  font-family: 'Open Sans';
+  font-size: 9px;
+  font-size: .5625rem;
+  font-weight: 700;
   margin-bottom: 0;
   text-transform: uppercase;
 }
@@ -527,8 +540,14 @@ section > .lead-in {
 .masthead {
   padding: 1.875rem;
   background-color: #7C577F;
-  color: #FFFFFF;
+  color: #FFFFFF
 }
+
+@media (min-width: 500px) {
+  .masthead {
+    text-align: left;
+  }
+  }
 
 .masthead h1,
   .masthead h2,
@@ -554,6 +573,14 @@ section > .lead-in {
   display: block;
   margin-top: 1.875em;
   margin-bottom: 0;
+}
+
+@media (min-width: 500px) {
+  .masthead .navbar .nav--primary {
+    float: right;
+    margin-top: 0;
+    text-align: right;
+  }
 }
 
 .masthead .navbar .nav--primary li {
@@ -662,6 +689,24 @@ section > .lead-in {
   /* TODO: Should these font styles be universal for <h4>'s? */
 }
 
+.pricing .pricing-tiers {
+
+}
+
+@media (min-width: 800px) {
+  .pricing .pricing-tiers {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    font-size: .85rem;
+    margin-top: 1.875rem;
+    margin-right: -15px;
+    margin-left: -15px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+}
+
 .pricing .pricing-tier {
   background-color: #ffffff;
   box-shadow: rgba(0, 0, 0, .20) 0 2px 4px 0;
@@ -670,17 +715,59 @@ section > .lead-in {
   margin-top: 1.875rem;
 }
 
+@media (min-width: 800px) {
+  .pricing .pricing-tier {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-right: 15px;
+    margin-left: 15px;
+  }
+}
+
+.pricing .pricing-tier.featured {
+
+}
+
+@media (min-width: 800px) {
+  .pricing .pricing-tier.featured {
+    margin-top: -30px;
+    margin-bottom: -30px;
+  }
+}
+
 .pricing .pricing-tier-details {
   padding: 30px;
+}
+
+@media (min-width: 800px) {
+  .pricing .pricing-tier-details {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 20px;
+  }
 }
 
 .pricing .pricing-tier-name {
   background-color: #e2e2e2;
   box-shadow: rgba(0, 0, 0, .40) 0 1px 2px 0;
   color: #333333;
-  font-family: 'Open Sans';
-  font-size: 21px;
-  font-weight: 700;
+  font-size: 1.3125em;
   padding: 20px;
 }
 
@@ -696,26 +783,26 @@ section > .lead-in {
 
 .pricing .price .amount {
   font-family: 'Slabo 27px';
-  font-size: 50px;
-  line-height: 61px;
+  font-size: 3.125em;
+  line-height: 1.22em;
 }
 
 .pricing .price .amount.numeric {
-  font-size: 65px;
-  line-height: 79px;
+  font-size: 4.0625em;
+  line-height: 1.215384em;
 }
 
 .pricing .price .term {
   color: #888888;
-  font-size: 20px;
+  font-size: 1.25em;
   line-height: 1.35em;
   vertical-align: super;
 }
 
 .pricing .pricing-tier-features {
-  font-size: 18px;
+  font-size: 1.125em;
   font-weight: 300;
-  line-height: 50px;
+  line-height: 2.5em;
   list-style-type: none;
   padding-left: 0;
 }
@@ -732,6 +819,12 @@ section > .lead-in {
   text-decoration: none;
   display: block;
   margin-top: 50px;
+}
+
+@media (min-width: 800px) {
+  .pricing .call-to-action {
+    margin-top: auto;
+  }
 }
 
 .pricing .footnote {
@@ -812,22 +905,43 @@ section > .lead-in {
   padding: 1.875rem;
   background-color: #7C577F;
   color: #FFFFFF;
+  font-size: 12px;
+  font-size: .75rem;
   text-align: left
 
-  /*& .grouped-links-container {
+}
 
-    @media only screen and (min-width: 680px) {
-      float: right;
-      width: 400px;
-    }
+.anchor .identity {
 
-  }*/
+}
 
+@media (min-width: 430px) {
+  .anchor .identity {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+  }
 }
 
 .anchor .legal {
   display: block;
   font-weight: 300;
+}
+
+@media (min-width: 430px) {
+  .anchor .legal {
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    text-align: right;
+  }
 }
 
 .anchor .legal b {
@@ -839,14 +953,26 @@ section > .lead-in {
   margin-top: 2em;
 }
 
-.anchor .grouped-links {
-  margin-top: 1.5em;
+@media (min-width: 430px) {
+  .anchor .site-logo {
+    margin-top: 0;
+  }
+}
 
-  /*@media only screen and (min-width: 480px) {
-      float: left;
-      width: 33%;
-      background: green;
-    }*/
+.anchor .grouped-links-container {
+  margin-top: .5em;
+}
+
+@media (min-width: 430px) {
+  .anchor .grouped-links-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+.anchor .grouped-links {
+  margin-top: 1.875em;
 }
 
 .anchor h1,
@@ -859,6 +985,14 @@ section > .lead-in {
   color: inherit;
 }
 
+@media (min-width: 430px) {
+  .anchor .grouped-links {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+}
+
 .anchor .grouped-links ul {
   list-style-type: none;
   margin-top: 0;
@@ -867,6 +1001,7 @@ section > .lead-in {
 }
 
 .anchor .grouped-links ul li {
+  line-height: 1.916666em;
   margin-top: .5em;
 }
 
@@ -874,6 +1009,13 @@ section > .lead-in {
   padding-top: .25em;
   padding-bottom: .25em;
   text-decoration: none;
+}
+
+@media (min-width: 800px) {
+  .anchor .grouped-links a {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
 }
 
 .anchor .grouped-links a:hover {

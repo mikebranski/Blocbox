@@ -59,6 +59,17 @@ h3 {
 }
 
 h4 {
+  font-family: var(--copyFontFamily);
+  font-size: 1.3125rem;
+  font-weight: 700;
+  margin-bottom: 0;
+  text-transform: uppercase;
+}
+
+h5 {
+  font-family: var(--copyFontFamily);
+  font-size: .5625rem;
+  font-weight: 700;
   margin-bottom: 0;
   text-transform: uppercase;
 }
@@ -132,6 +143,10 @@ section > .lead-in {
 
 .masthead {
   @mixin container__accented;
+
+  @media (min-width: 500px) {
+    text-align: left;
+  }
 }
 
 .masthead .navbar {
@@ -145,6 +160,12 @@ section > .lead-in {
     display: block;
     margin-top: 1.875em;
     margin-bottom: 0;
+
+    @media (min-width: 500px) {
+      float: right;
+      margin-top: 0;
+      text-align: right;
+    }
 
     & li {
       display: inline-block;
@@ -214,15 +235,49 @@ section > .lead-in {
   background-image: url('../images/pricing-background.png');
   background-size: cover;
 
+  & .pricing-tiers {
+    @media (min-width: 800px) {
+      display: flex;
+      font-size: .85rem;
+      margin-top: 1.875rem;
+      margin-right: -15px;
+      margin-left: -15px;
+      padding-top: 30px;
+      padding-bottom: 30px;
+    }
+  }
+
   & .pricing-tier {
     background-color: #ffffff;
     box-shadow: rgba(0, 0, 0, .20) 0 2px 4px 0;
     color: var(--darkText);
     margin-top: 1.875rem;
+
+    @media (min-width: 800px) {
+      display: flex;
+      flex-grow: 1;
+      flex-direction: column;
+      margin-right: 15px;
+      margin-left: 15px;
+    }
+
+    &.featured {
+      @media (min-width: 800px) {
+        margin-top: -30px;
+        margin-bottom: -30px;
+      }
+    }
   }
 
   & .pricing-tier-details {
     padding: 30px;
+
+    @media (min-width: 800px) {
+      display: flex;
+      flex-grow: 1;
+      flex-direction: column;
+      padding: 20px;
+    }
   }
 
   /* TODO: Should these font styles be universal for <h4>'s? */
@@ -230,9 +285,7 @@ section > .lead-in {
     background-color: #e2e2e2;
     box-shadow: rgba(0, 0, 0, .40) 0 1px 2px 0;
     color: var(--darkText);
-    font-family: var(--copyFontFamily);
-    font-size: 21px;
-    font-weight: 700;
+    font-size: 1.3125em;
     padding: 20px;
   }
 
@@ -247,27 +300,27 @@ section > .lead-in {
 
     & .amount {
       font-family: var(--headingFontFamily);
-      font-size: 50px;
-      line-height: 61px;
+      font-size: 3.125em;
+      line-height: 1.22em;
 
       &.numeric {
-        font-size: 65px;
-        line-height: 79px;
+        font-size: 4.0625em;
+        line-height: 1.215384em;
       }
     }
 
     & .term {
       color: #888888;
-      font-size: 20px;
+      font-size: 1.25em;
       line-height: 1.35em;
       vertical-align: super;
     }
   }
 
   & .pricing-tier-features {
-    font-size: 18px;
+    font-size: 1.125em;
     font-weight: 300;
-    line-height: 50px;
+    line-height: 2.5em;
     list-style-type: none;
     padding-left: 0;
   }
@@ -276,6 +329,10 @@ section > .lead-in {
     @mixin button;
     display: block;
     margin-top: 50px;
+
+    @media (min-width: 800px) {
+      margin-top: auto;
+    }
   }
 
   & .footnote {
@@ -340,11 +397,25 @@ section > .lead-in {
 
 .anchor {
   @mixin container__accented;
+  font-size: .75rem;
   text-align: left;
+
+  & .identity {
+    @media (min-width: 430px) {
+      align-items: center;
+      display: flex;
+      flex-direction: row-reverse;
+    }
+  }
 
   & .legal {
     display: block;
     font-weight: 300;
+
+    @media (min-width: 430px) {
+      flex-grow: 1;
+      text-align: right;
+    }
 
     & b {
       font-weight: 700;
@@ -354,25 +425,27 @@ section > .lead-in {
   & .site-logo {
     display: block;
     margin-top: 2em;
+
+    @media (min-width: 430px) {
+      margin-top: 0;
+    }
   }
 
-  /*& .grouped-links-container {
+  & .grouped-links-container {
+    margin-top: .5em;
 
-    @media only screen and (min-width: 680px) {
-      float: right;
-      width: 400px;
+    @media (min-width: 430px) {
+      display: flex;
     }
 
-  }*/
+  }
 
   & .grouped-links {
-    margin-top: 1.5em;
+    margin-top: 1.875em;
 
-    /*@media only screen and (min-width: 480px) {
-      float: left;
-      width: 33%;
-      background: green;
-    }*/
+    @media (min-width: 430px) {
+      flex: 1;
+    }
 
     & ul {
       list-style-type: none;
@@ -381,6 +454,7 @@ section > .lead-in {
       padding-left: 0;
 
       & li {
+        line-height: 1.916666em;
         margin-top: .5em;
       }
     }
@@ -389,6 +463,11 @@ section > .lead-in {
       padding-top: .25em;
       padding-bottom: .25em;
       text-decoration: none;
+
+      @media (min-width: 800px) {
+        padding-top: 0;
+        padding-bottom: 0;
+      }
 
       &:hover {
         text-decoration: underline;
