@@ -352,23 +352,23 @@ section > .lead-in {
     margin-top: 2em;
   }
 
-  & .grouped-links-container {
+  /*& .grouped-links-container {
 
     @media only screen and (min-width: 680px) {
       float: right;
       width: 400px;
     }
 
-  }
+  }*/
 
   & .grouped-links {
     margin-top: 1.5em;
 
-    @media only screen and (min-width: 480px) {
+    /*@media only screen and (min-width: 480px) {
       float: left;
       width: 33%;
       background: green;
-    }
+    }*/
 
     & ul {
       list-style-type: none;
