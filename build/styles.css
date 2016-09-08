@@ -637,6 +637,10 @@ section > .lead-in {
           flex-direction: column-reverse;
 }
 
+.features .feature .feature-image img {
+  width: 100%;
+}
+
 .features .feature .feature-description {
   font-size: 1.5em;
   font-weight: 300;
