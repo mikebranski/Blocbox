@@ -336,6 +336,7 @@ section > .lead-in {
 
 .anchor {
   @mixin container__accented;
+  text-align: left;
 
   & .legal {
     display: block;
@@ -376,7 +377,17 @@ section > .lead-in {
       padding-left: 0;
 
       & li {
-        /**/
+        margin-top: .5em;
+      }
+    }
+
+    & a {
+      padding-top: .25em;
+      padding-bottom: .25em;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
       }
     }
   }

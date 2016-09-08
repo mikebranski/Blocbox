@@ -807,7 +807,8 @@ section > .lead-in {
 .anchor {
   padding: 1.875rem;
   background-color: #7C577F;
-  color: #FFFFFF
+  color: #FFFFFF;
+  text-align: left
 
 }
 
@@ -866,8 +867,17 @@ section > .lead-in {
 }
 
 .anchor .grouped-links ul li {
+  margin-top: .5em;
+}
 
-  /**/
+.anchor .grouped-links a {
+  padding-top: .25em;
+  padding-bottom: .25em;
+  text-decoration: none;
+}
+
+.anchor .grouped-links a:hover {
+  text-decoration: underline;
 }
 
 /* Nesting example. */
