@@ -388,9 +388,20 @@ section > .lead-in {
   & .testimonials-list {
     margin-top: 40px;
 
+    @media (min-width: 900px) {
+      margin-right: auto;
+      margin-left: auto;
+      text-align: left;
+      width: 85%;
+    }
+
     & .testimonial {
       display: flex;
       flex-direction: column-reverse;
+
+      @media (min-width: 900px) {
+        flex-direction: row;
+      }
 
       & + .testimonial {
         margin-top: 30px;
@@ -402,6 +413,18 @@ section > .lead-in {
       margin-right: auto;
       margin-left: auto;
       width: 80%;
+
+      @media (min-width: 900px) {
+        display: flex;
+        margin-top: 0;
+        width: 300px;
+      }
+    }
+
+    & .details {
+      @media (min-width: 900px) {
+        margin-left: 50px;
+      }
     }
 
     & .avatar {
@@ -431,6 +454,11 @@ section > .lead-in {
       font-size: 18px;
       line-height: 24px;
       margin: 0;
+
+      @media (min-width: 900px) {
+        flex: 1;
+        margin-left: 30px;
+      }
     }
   }
 }

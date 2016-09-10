@@ -915,6 +915,15 @@ section > .lead-in {
   margin-top: 40px;
 }
 
+@media (min-width: 900px) {
+  .testimonials .testimonials-list {
+    margin-right: auto;
+    margin-left: auto;
+    text-align: left;
+    width: 85%;
+  }
+}
+
 .testimonials .testimonials-list .testimonial {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -923,6 +932,15 @@ section > .lead-in {
   -webkit-box-direction: reverse;
       -ms-flex-direction: column-reverse;
           flex-direction: column-reverse;
+}
+
+@media (min-width: 900px) {
+  .testimonials .testimonials-list .testimonial {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
 }
 
 .testimonials .testimonials-list .testimonial + .testimonial {
@@ -934,6 +952,26 @@ section > .lead-in {
   margin-right: auto;
   margin-left: auto;
   width: 80%;
+}
+
+@media (min-width: 900px) {
+  .testimonials .testimonials-list .identity-plate {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: 0;
+    width: 300px;
+  }
+}
+
+.testimonials .testimonials-list .details {
+
+}
+
+@media (min-width: 900px) {
+  .testimonials .testimonials-list .details {
+    margin-left: 50px;
+  }
 }
 
 .testimonials .testimonials-list .avatar {
@@ -963,6 +1001,15 @@ section > .lead-in {
   font-size: 18px;
   line-height: 24px;
   margin: 0;
+}
+
+@media (min-width: 900px) {
+  .testimonials .testimonials-list .quote {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    margin-left: 30px;
+  }
 }
 
 .anchor {
