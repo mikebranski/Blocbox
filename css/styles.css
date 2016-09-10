@@ -50,7 +50,7 @@ h1 {
 
 h2 {
   font-size: 48px;
-  line-height: 58px;
+  line-height: 1.208333em;
 }
 
 h3 {
@@ -212,8 +212,28 @@ section > .lead-in {
     display: flex;
     flex-direction: column-reverse;
 
-    & .feature-image img {
-      width: 100%;
+    @media (min-width: 680px) {
+      align-items: center;
+      flex-direction: row-reverse;
+
+      &:nth-child(2) {
+        flex-direction: row;
+      }
+    }
+
+    & .feature-image {
+      @media (min-width: 680px) {
+        width: 50%;
+      }
+
+      & img {
+        display: block;
+        width: 100%;
+      }
+    }
+
+    & .feature-title {
+      font-size: 2em;
     }
 
     & .feature-description {
@@ -221,8 +241,28 @@ section > .lead-in {
       font-weight: 300;
       padding: 3.75rem;
 
+      @media (min-width: 680px) {
+        flex: 1;
+        font-size: 1.2em;
+        padding: 1rem;
+      }
+
+      @media (min-width: 840px) {
+        font-size: 1.4em;
+        padding: 1.5rem;
+      }
+
+      @media (min-width: 1110px) {
+        font-size: 1.5em;
+        padding: 3.75rem;
+      }
+
       & p {
         margin-top: 1.083333em;
+
+        @media (min-width: 680px) {
+          margin-top: .7em;
+        }
       }
     }
 
