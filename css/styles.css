@@ -201,15 +201,20 @@ section > .lead-in {
   margin-top: 2.5rem;
 
   @media (min-width: 920px) {
+    align-items: center;
+    display: flex;
     font-size: 1rem;
     min-height: 407px;
   }
 
+  @media (min-width: 1035px) {
+    font-size: 1.2rem;
+  }
+
   & .hero-content {
     @media (min-width: 920px) {
-      position: relative;
+      margin-right: -20px;
       width: 320px;
-      z-index: 10;
     }
   }
 
@@ -237,11 +242,6 @@ section > .lead-in {
 
     @media (min-width: 920px) {
       display: block;
-      left: 318px;
-      position: absolute;
-      top: 50%;
-      transform: translateY(-25%);
-      width: 660px;
     }
   }
 

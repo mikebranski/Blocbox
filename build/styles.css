@@ -641,8 +641,20 @@ section > .lead-in {
 
 @media (min-width: 920px) {
   .masthead .hero {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     font-size: 1rem;
     min-height: 407px;
+  }
+  }
+
+@media (min-width: 1035px) {
+  .masthead .hero {
+    font-size: 1.2rem;
   }
   }
 
@@ -652,9 +664,8 @@ section > .lead-in {
 
 @media (min-width: 920px) {
   .masthead .hero .hero-content {
-    position: relative;
+    margin-right: -20px;
     width: 320px;
-    z-index: 10;
   }
 }
 
@@ -694,12 +705,6 @@ section > .lead-in {
 @media (min-width: 920px) {
   .masthead .hero .hero-image {
     display: block;
-    left: 318px;
-    position: absolute;
-    top: 50%;
-    -webkit-transform: translateY(-25%);
-            transform: translateY(-25%);
-    width: 660px;
   }
 }
 
