@@ -482,6 +482,7 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   font-size: 64px;
+  font-size: 4rem;
   line-height: 1.125em;
 }
 
@@ -565,6 +566,16 @@ section > .lead-in {
 
 }
 
+.masthead .navbar::before,
+  .masthead .navbar::after {
+  content: " ";
+  display: table;
+}
+
+.masthead .navbar::after {
+  clear: both;
+}
+
 .masthead .navbar .site-logo {
   display: inline-block;
 }
@@ -628,8 +639,28 @@ section > .lead-in {
 
 }
 
+@media (min-width: 920px) {
+  .masthead .hero {
+    font-size: 1rem;
+    min-height: 407px;
+  }
+  }
+
+.masthead .hero .hero-content {
+
+}
+
+@media (min-width: 920px) {
+  .masthead .hero .hero-content {
+    position: relative;
+    width: 320px;
+    z-index: 10;
+  }
+}
+
 .masthead .hero h1 {
   color: inherit;
+  font-size: 2.909090em;
 }
 
 .masthead .hero p {
@@ -648,6 +679,28 @@ section > .lead-in {
   text-decoration: none;
   font-size: 0.727272em;
   margin-top: 1.875em;
+}
+
+@media (min-width: 920px) {
+  .masthead .hero .call-to-action {
+    display: block;
+  }
+}
+
+.masthead .hero .hero-image {
+  display: none;
+}
+
+@media (min-width: 920px) {
+  .masthead .hero .hero-image {
+    display: block;
+    left: 318px;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-25%);
+            transform: translateY(-25%);
+    width: 660px;
+  }
 }
 
 .features {
