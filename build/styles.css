@@ -665,13 +665,19 @@ section > .lead-in {
 @media (min-width: 920px) {
   .masthead .hero .hero-content {
     margin-right: -20px;
-    width: 320px;
+    width: 295px;
   }
 }
 
 .masthead .hero h1 {
   color: inherit;
   font-size: 2.909090em;
+}
+
+@media (min-width: 920px) {
+  .masthead .hero h1 {
+    margin-top: -1em;
+  }
 }
 
 .masthead .hero p {
