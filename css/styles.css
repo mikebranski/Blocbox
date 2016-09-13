@@ -620,7 +620,24 @@ section > .lead-in {
 
 }
 
-/* Nesting example. */
-/*ul {
-  & li {}
-}*/
+.auth-flow {
+  @mixin container__accented;
+
+  & .card {
+    @mixin container;
+    background-color: #ffffff;
+    color: var(--darkText);
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 600px;
+    min-width: 60%;
+
+    & h1 {
+      color: var(--mainColor);
+    }
+
+    & .call-to-action {
+      @mixin button;
+    }
+  }
+}

@@ -1275,7 +1275,58 @@ section > .lead-in {
   text-decoration: underline;
 }
 
-/* Nesting example. */
-/*ul {
-  & li {}
-}*/
+.auth-flow {
+  padding: 1.875rem;
+  background-color: #7C577F;
+  color: #FFFFFF
+}
+
+.auth-flow .card {
+  padding: 1.875rem;
+  background-color: #ffffff;
+  color: #333333;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 600px;
+  min-width: 60%;
+}
+
+@media (min-width: 990px) {
+  .auth-flow {
+    padding-right: 3.75rem;
+    padding-left: 3.75rem;
+  }
+}
+
+.auth-flow h1,
+  .auth-flow h2,
+  .auth-flow h3,
+  .auth-flow h4,
+  .auth-flow h5,
+  .auth-flow h6,
+  .auth-flow a {
+  color: inherit;
+}
+
+.auth-flow .card h1 {
+  color: #7C577F;
+}
+
+.auth-flow .card .call-to-action {
+  background-color: #1DB4C5;
+  border-radius: 4px;
+  box-shadow: inset 0 -2px 2px 0 #126973;
+  color: #FFFFFF;
+  display: inline-block;
+  font-weight: bold;
+  padding: 1em 3em;
+  text-align: center;
+  text-decoration: none;
+}
+
+@media (min-width: 990px) {
+  .auth-flow .card {
+    padding-right: 3.75rem;
+    padding-left: 3.75rem;
+  }
+}
