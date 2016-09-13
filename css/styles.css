@@ -518,11 +518,32 @@ section > .lead-in {
   font-size: .75rem;
   text-align: left;
 
+  @media (min-width: 580px) {
+    align-items: center;
+    display: flex;
+  }
+
+  &::before,
+  &::after {
+    @media (min-width: 580px) {
+      display: block;
+      width: 20%;
+      height: 100px;
+      content: ' ';
+    }
+  }
+
   & .identity {
     @media (min-width: 430px) {
       align-items: center;
       display: flex;
       flex-direction: row-reverse;
+    }
+
+    @media (min-width: 580px) {
+      align-items: flex-start;
+      flex: 1;
+      flex-direction: column;
     }
   }
 
@@ -544,7 +565,7 @@ section > .lead-in {
     display: block;
     margin-top: 2em;
 
-    @media (min-width: 430px) {
+    @media (min-width: 430px and max-width: 579px) {
       margin-top: 0;
     }
   }
@@ -554,6 +575,10 @@ section > .lead-in {
 
     @media (min-width: 430px) {
       display: flex;
+    }
+
+    @media (min-width: 580px) {
+      flex: 1;
     }
 
   }
