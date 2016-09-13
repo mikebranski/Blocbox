@@ -550,6 +550,13 @@ section > .lead-in {
   }
   }
 
+@media (min-width: 990px) {
+  .masthead {
+    padding-right: 3.75rem;
+    padding-left: 3.75rem;
+  }
+}
+
 .masthead h1,
   .masthead h2,
   .masthead h3,
@@ -961,6 +968,13 @@ section > .lead-in {
   font-style: italic;
 }
 
+@media (min-width: 990px) {
+  .pricing {
+    padding-right: 3.75rem;
+    padding-left: 3.75rem;
+  }
+}
+
 .pricing h1,
   .pricing h2,
   .pricing h3,
@@ -977,6 +991,13 @@ section > .lead-in {
 
 .testimonials .testimonials-list {
   margin-top: 40px;
+}
+
+@media (min-width: 990px) {
+  .testimonials {
+    padding-right: 3.75rem;
+    padding-left: 3.75rem;
+  }
 }
 
 @media (min-width: 900px) {
@@ -1148,6 +1169,13 @@ section > .lead-in {
 
 .anchor .grouped-links {
   margin-top: 1.875em;
+}
+
+@media (min-width: 990px) {
+  .anchor {
+    padding-right: 3.75rem;
+    padding-left: 3.75rem;
+  }
 }
 
 .anchor h1,

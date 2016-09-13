@@ -96,6 +96,11 @@ nav ul {
 
 @define-mixin container {
   padding: 1.875rem;
+
+  @media (min-width: 990px) {
+    padding-right: 3.75rem;
+    padding-left: 3.75rem;
+  }
 }
 
 @define-mixin container__accented {
