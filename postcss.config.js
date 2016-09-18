@@ -9,7 +9,10 @@ module.exports = {
     // additional configuration. Requires further investigation.
     // "postcss-px-to-em"
   ],
-  "input": "css/styles.css",
+  "input": [
+    "css/dashboard.css",
+    "css/styles.css",
+  ],
   "dir": "build",
   "watch": true,
   // "postcss-px-to-em": {
