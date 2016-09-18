@@ -715,6 +715,21 @@ section > .lead-in {
         width: 100%;
       }
 
+      & .checkbox {
+        text-align: left;
+
+        & input[type="checkbox"] {
+          display: inline-block;
+          width: auto;
+        }
+
+        & label {
+          font-size: .75em;
+          font-weight: 300;
+          margin-left: 6px;
+        }
+      }
+
       & button[type='submit'] {
         @mixin button;
         cursor: pointer;

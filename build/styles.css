@@ -1439,6 +1439,21 @@ section > .lead-in {
   width: 100%;
 }
 
+.auth-flow .card form .checkbox {
+  text-align: left;
+}
+
+.auth-flow .card form .checkbox input[type="checkbox"] {
+  display: inline-block;
+  width: auto;
+}
+
+.auth-flow .card form .checkbox label {
+  font-size: .75em;
+  font-weight: 300;
+  margin-left: 6px;
+}
+
 .auth-flow .card form button[type='submit'] {
   background-color: #1DB4C5;
   border: none;
