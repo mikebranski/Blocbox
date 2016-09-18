@@ -1320,22 +1320,49 @@ section > .lead-in {
   color: #7C577F;
 }
 
+.auth-flow .card p {
+  margin-top: 1em;
+}
+
 .auth-flow .card .separator {
-
-  /* TODO: Add horizontal lines. */
-
-  /*color: var(--darkText);*/
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   font-size: .875em;
+  font-weight: 300;
   margin-top: 1.428571429em;
+  opacity: .3;
+  padding-right: 6px;
+  padding-left: 6px;
   text-transform: uppercase;
+}
+
+.auth-flow .card .separator::before,
+      .auth-flow .card .separator::after {
+  background-color: #333333;
+  content: ' ';
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  height: 1px;
+}
+
+.auth-flow .card .separator::before {
+  border-right: 6px solid white;
+}
+
+.auth-flow .card .separator::after {
+  border-left: 6px solid white;
 }
 
 .auth-flow .card .calls-to-action {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-top: 30px;
-  margin-top: 1.875rem;
+  margin-top: 1.5em;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -1355,13 +1382,6 @@ section > .lead-in {
   padding-left: 2em;
 }
 
-@media (min-width: 990px) {
-  .auth-flow .card {
-    padding-right: 3.75rem;
-    padding-left: 3.75rem;
-  }
-}
-
 .auth-flow .card .call-to-action.facebook {
   background-color: #3B5998;
   box-shadow: inset 0 -2px 2px 0 #283F6E;
@@ -1370,4 +1390,23 @@ section > .lead-in {
 .auth-flow .card .call-to-action.twitter {
   background-color: #55ACEE;
   box-shadow: inset 0 -2px 2px 0 #3877A7;
+}
+
+.auth-flow .card small {
+  display: block;
+  font-size: .875em;
+  margin-top: 2.142857em;
+}
+
+@media (min-width: 990px) {
+  .auth-flow .card {
+    padding-right: 3.75rem;
+    padding-left: 3.75rem;
+  }
+}
+
+.auth-flow .card small a {
+  color: #7C577F;
+  font-weight: 700;
+  text-decoration: none;
 }

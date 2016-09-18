@@ -637,17 +637,41 @@ section > .lead-in {
       color: var(--mainColor);
     }
 
+    & p {
+      margin-top: 1em;
+    }
+
     & .separator {
-      /* TODO: Add horizontal lines. */
-      /*color: var(--darkText);*/
+      align-items: center;
+      display: flex;
       font-size: .875em;
+      font-weight: 300;
       margin-top: 1.428571429em;
+      opacity: .3;
+      padding-right: 6px;
+      padding-left: 6px;
       text-transform: uppercase;
+
+      &::before,
+      &::after {
+        background-color: var(--darkText);
+        content: ' ';
+        flex-grow: 1;
+        height: 1px;
+      }
+
+      &::before {
+        border-right: 6px solid white;
+      }
+
+      &::after {
+        border-left: 6px solid white;
+      }
     }
 
     & .calls-to-action {
       display: flex;
-      margin-top: 1.875rem;
+      margin-top: 1.5em;
       justify-content: space-between;
     }
 
@@ -664,6 +688,18 @@ section > .lead-in {
       &.twitter {
         background-color: #55ACEE;
         box-shadow: inset 0 -2px 2px 0 #3877A7;
+      }
+    }
+
+    & small {
+      display: block;
+      font-size: .875em;
+      margin-top: 2.142857em;
+
+      & a {
+        color: var(--mainColor);
+        font-weight: 700;
+        text-decoration: none;
       }
     }
   }
