@@ -122,6 +122,7 @@ nav ul {
 
 @define-mixin button {
   background-color: var(--altColor);
+  border: none;
   border-radius: var(--borderRadius);
   box-shadow: inset 0 -2px 2px 0 var(--altColorAccent);
   color: var(--lightText);
@@ -627,10 +628,11 @@ section > .lead-in {
   & .card {
     @mixin container;
     background-color: #ffffff;
+    border-radius: 4px;
     color: var(--darkText);
     margin-right: auto;
     margin-left: auto;
-    max-width: 600px;
+    max-width: 750px;
     min-width: 60%;
 
     & h1 {
@@ -677,8 +679,13 @@ section > .lead-in {
 
     & .call-to-action {
       @mixin button;
+      flex-grow: 1;
       padding-right: 2em;
       padding-left: 2em;
+
+      &+.call-to-action {
+        margin-left: 1.875rem;
+      }
 
       &.facebook {
         background-color: #3B5998;
@@ -688,6 +695,32 @@ section > .lead-in {
       &.twitter {
         background-color: #55ACEE;
         box-shadow: inset 0 -2px 2px 0 #3877A7;
+      }
+    }
+
+    & form {
+      & ::placeholder {
+        opacity: .5;
+      }
+
+      & input {
+        border-color: #979797;
+        border-radius: 4px;
+        border-width: 1px;
+        border-style: solid;
+        display: block;
+        font-weight: 300;
+        margin-top: 1.25rem;
+        padding: 15px 20px;
+        width: 100%;
+      }
+
+      & button[type='submit'] {
+        @mixin button;
+        cursor: pointer;
+        display: block;
+        margin-top: 1.25rem;
+        width: 100%;
       }
     }
 
