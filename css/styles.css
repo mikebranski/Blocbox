@@ -2,7 +2,6 @@
  * Consider rolling in [PreCSS](https://github.com/jonathantneal/precss).
  */
 
-/* Variable example. */
 :root {
   /* Purple! */
   --mainColor: #7C577F;
