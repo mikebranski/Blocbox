@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700|Slabo+13px|Slabo+27px">
   <link rel="stylesheet" href="build/dashboard.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+  <link rel="stylesheet" href="lib/dropit/dropit.css">
 
 </head>
 
@@ -42,10 +43,19 @@
   <main role="main">
     <div class="content-bar">
       <h1>All Items</h1>
-      <a href="" class="main-page-action">
-        <i class="fa fa-plus"></i>
-        Add
-      </a>
+      <ul class="menu">
+        <li>
+          <a href="" class="main-page-action">
+            <i class="fa fa-plus"></i>
+            Add
+          </a>
+          <ul>
+            <li><a href="#"><i class="fa fa-file-o"></i> Note</a></li>
+            <li><a href="#"><i class="fa fa-picture-o"></i> Image</a></li>
+            <li><a href="#"><i class="fa fa-link"></i> Link</a></li>
+          </ul>
+        </li>
+      </ul>
     </div>
     <section class="content">
       <div class="container">
@@ -109,5 +119,15 @@
       </div>
     </section>
   </main>
+
+  <script
+    src="https://code.jquery.com/jquery-2.2.4.min.js"
+    integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+    crossorigin="anonymous">
+  </script>
+  <script src="lib/dropit/dropit.js"></script>
+  <script type="text/javascript">
+    $('.menu').dropit();
+  </script>
 </body>
 </html>
