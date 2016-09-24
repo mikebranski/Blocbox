@@ -430,13 +430,58 @@ textarea {
    background:#F7F7F7;
  }
  .left-nav {
-   height: 100vh;
+   background-color: #FFFAFC;
+   height: 100%;
    width:220px;
-   color:#FFFAFC;
-   background: #FFFAFF;
-   float:left;
-   position: fixed;
+   position:absolute;
+   -webkit-transition: all 0.3s ease-in-out;
+   transition: all 0.3s ease-in-out;
+   -webkit-transform: translate(-280px,0);
+           transform: translate(-280px,0);
+ }
+ .left-nav.open {
    display:block;
+   width:280px;
+   -webkit-transition: all 0.3s ease-in-out;
+   transition: all 0.3s ease-in-out;
+   transform: translate(0,0);
+     -webkit-transform: translate(0,0); /** Chrome & Safari **/
+     -o-transform: translate(0,0); /** Opera **/
+     -moz-transform: translate(0,0); /** Firefox **/
+     z-index: 100;
+ }
+ .hamburger {
+   position:absolute;
+   z-index: 1000;
+   background: #7C577F;
+   color:#FFFAFC;
+   text-decoration: none;
+   font-size: 22px;
+   padding: 10px 15px;
+   border-radius: 4px;
+   left: 20px;
+   top: 20px;
+ }
+ @media (min-width:992px) {
+   .left-nav {
+     height: 100vh;
+     width:220px;
+     color:#FFFAFC;
+     background: #FFFAFF;
+     float:left;
+     position: fixed;
+     display:block;
+     -webkit-transform: translate(0,0);
+             transform: translate(0,0);
+   }
+   .left-nav.open {
+     width:220px;
+     -webkit-transform: translate(0,0);
+             transform: translate(0,0);
+   }
+   .hamburger {
+     display:none;
+   }
  }
  .left-nav .site-logo {
    padding:20px 0;
@@ -481,6 +526,8 @@ textarea {
 
  /* LEFT NAVBAR SETTINGS */
  .left-nav .settings {
+   color: #FFFAFC;
+   font-weight: 300;
    position:absolute;
    background: #7C577F;
    width:100%;
@@ -514,8 +561,13 @@ textarea {
 
  /* CONTENT */
  main {
-   margin-left: 220px;
  }
+ @media (min-width: 992px) {
+
+  main {
+    margin-left: 220px;
+  }
+   }
 
 .content-bar {
   -webkit-box-align: center;
@@ -528,9 +580,17 @@ textarea {
   display: -ms-flexbox;
   display: flex;
   height: 84px;
-  padding: 0 30px;
-  width: 100%;
+  padding-right: 30px;
+  padding-left: 95px;
+  width: 100%
 }
+
+@media (min-width:992px) {
+
+  .content-bar {
+    padding-left: 30px;
+  }
+  }
 .content-bar h1 {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;

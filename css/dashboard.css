@@ -42,13 +42,56 @@
    background:#F7F7F7;
  }
  .left-nav {
-   height: 100vh;
+   background-color: #FFFAFC;
+   height: 100%;
    width:220px;
-   color:#FFFAFC;
-   background: #FFFAFF;
-   float:left;
-   position: fixed;
+   position:absolute;
+   transition: all 0.3s ease-in-out;
+   transform: translate(-280px,0);
+ }
+ .left-nav.open {
    display:block;
+   width:280px;
+   -webkit-transition: all 0.3s ease-in-out;
+   -moz-transition: all 0.3s ease-in-out;
+   -o-transition: all 0.3s ease-in-out;
+   transition: all 0.3s ease-in-out;
+   transform: translate(0,0);
+     -webkit-transform: translate(0,0); /** Chrome & Safari **/
+     -o-transform: translate(0,0); /** Opera **/
+     -moz-transform: translate(0,0); /** Firefox **/
+     z-index: 100;
+ }
+ .hamburger {
+   position:absolute;
+   z-index: 1000;
+   background:var(--mainColor);
+   color:#FFFAFC;
+   text-decoration: none;
+   font-size: 22px;
+   padding: 10px 15px;
+   border-radius: 4px;
+   left: 20px;
+   top: 20px;
+ }
+ @media (min-width:992px) {
+   .left-nav {
+     height: 100vh;
+     width:220px;
+     color:#FFFAFC;
+     background: #FFFAFF;
+     float:left;
+     position: fixed;
+     display:block;
+     transform: translate(0,0);
+   }
+   .left-nav.open {
+     width:220px;
+     transform: translate(0,0);
+   }
+   .hamburger {
+     display:none;
+   }
  }
  .left-nav .site-logo {
    padding:20px 0;
@@ -93,6 +136,8 @@
 
  /* LEFT NAVBAR SETTINGS */
  .left-nav .settings {
+   color: #FFFAFC;
+   font-weight: 300;
    position:absolute;
    background:var(--mainColor);
    width:100%;
@@ -126,7 +171,9 @@
 
  /* CONTENT */
  main {
-   margin-left: 220px;
+   @media (min-width: 992px) {
+     margin-left: 220px;
+   }
  }
 
 .content-bar {
@@ -136,8 +183,13 @@
   color: var(--lightText);
   display: flex;
   height: 84px;
-  padding: 0 30px;
+  padding-right: 30px;
+  padding-left: 95px;
   width: 100%;
+
+  @media (min-width:992px) {
+    padding-left: 30px;
+  }
 }
 .content-bar h1 {
   flex-grow: 1;
